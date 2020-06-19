@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+<div class="row">
+{% for project in project %}
+    <div class="card">
+            <img class="card-img-top" src = "{{ project.image.url}}">
+    <div class="card-body">
+                <h5 class="card-text">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <a href="{% url 'project_detail' project.pk  %}" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

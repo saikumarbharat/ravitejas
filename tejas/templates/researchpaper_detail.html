@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <h1>Title: {{ researchpaper.title }}</h1>
+<div class="row">
+  <div class="card">
+  <p><strong>Authors:</strong> {{researchpaper.display_author}}</p>
+  <p><strong>Abstract:</strong> {{researchpaper.abstract }}</p>
+  <p><strong>ISBN:</strong> {{researchpaper.isbn }}</p>
+  <p><strong>Publisher:</strong> {{researchpaper.publisher }}</p>
+  <p><strong>Date_of_Publication:</strong> {{researchpaper.date_of_publication}}</p>
+  /div>
+</div>
+{% endblock %}

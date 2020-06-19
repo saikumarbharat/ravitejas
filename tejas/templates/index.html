@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+ {% load static %}
+{% block content %}
+  {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+<header class="page-header header container-fluid">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/umd/util.js"></script>
+<div class="description">
+  <h2>Hai! Iam Ravi Teja. Welcome to my Page!</h1>
+  <p>I wouldlike to introduce my self. After my B.Tech(Mech), I did my MA(socialogy) at CentralUniv, Hyd, due to my bond towards society. Research is my passion.I have carried out some research during B.Tech and MA(Socialogy) .Right now I am working in Nalsar Univ, Hyd on a project. My hobbies include Kathak, Marathon Running, Treking and visiting all places to study life sytles and problems of people with a hope to find solution to their problems. pl. contact me to share your views </p>
+<a href="{% url 'resume' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Want to know more</a>
+</div>
+
+</header>
+
+{% endblock %}

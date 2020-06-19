@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+  <h1>ResearchPaper List</h1>
+  {% if researchpaper_list %}
+  <ul>
+    {% for researchpaper in researchpaper_list %}
+      <li>
+        <a href="{% url 'researchpaper'  pk=researchpaper.id  %}">{{researchpaper.title }}</a>,{{researchpaper.display_author}},{{researchpaper.isbn}},{{researchpaper.date_of_publication}},{{researchpaper.publisher}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no researchpapers in the Center.</p>
+  {% endif %}
+{% endblock %}
