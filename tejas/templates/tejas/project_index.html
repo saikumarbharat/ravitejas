@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 {% block content %}
 {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
-{<div class="row">
+<div class="row">
 {% for project in project %}
     <div class="card">
             <img class="card-img-top" src = "{{ project.image.url}}">

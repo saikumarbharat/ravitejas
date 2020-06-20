@@ -10,14 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import os
-#import django.configurations
 import dj_database_url
 import environ
 from decouple import config
 from decouple import Csv
 import psycopg2
-
-from configurations import Configuration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,9 +28,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.environ["DEBUG"] = 'False'
 DEBUG = config('DEBUG',  cast = bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-
 SECRET_KEY = config('SECRET_KEY')
+
+#ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = ['ravitejas.pythonanywhere.com'] 
 # Application definition
 
 INSTALLED_APPS = [
@@ -154,4 +152,4 @@ CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
 SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=False, cast=bool)
-SECURE_REFERRER_POLICY = config('SECURE_REFERRER_POLICY')
+SSECURE_REFERRER_POLICY = 'no-referrer-when-downgrade'
