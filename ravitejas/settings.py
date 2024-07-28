@@ -31,7 +31,7 @@ DEBUG = config('DEBUG',  cast = bool)
 SECRET_KEY = config('SECRET_KEY')
 
 #ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-ALLOWED_HOSTS = ['ravitejas.pythonanywhere.com'] 
+ALLOWED_HOSTS = ['*'] 
 # Application definition
 
 INSTALLED_APPS = [
